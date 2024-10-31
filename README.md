@@ -1,0 +1,1 @@
+## APP to Dockerize PostgreSQL and Spring Boot aplication
