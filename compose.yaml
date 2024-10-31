@@ -1,0 +1,33 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      #POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "1234"
+      #POSTGRES_DB: doctors_patients
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+    networks:
+      - postgres-app-network
+
+  app:
+    build: .
+    container_name: app
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    networks:
+      - postgres-app-network
+
+volumes:
+  postgresdata:
+
+networks:
+  postgres-app-network:
+    driver: bridge
