@@ -14,8 +14,3 @@
 * Hibernate | JPA
 * Lombok
 * Git | Github
-
-## Project under development.. future improvements: 🚀
-=> Review some errors
-
-=> Add React or Angular, and dockerize too, to make a really full stack dockerize app ^_^
